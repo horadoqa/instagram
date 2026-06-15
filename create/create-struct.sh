@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+PROJECT="hora-do-qa"
+
+files=(
+  index.html
+  assets/images/horadoqa.png
+  assets/icons/api.svg
+  assets/icons/automation.svg
+  assets/icons/management.svg
+  assets/icons/performance.svg
+  assets/icons/git.svg
+  assets/icons/cicd.svg
+  css/reset.css
+  css/variables.css
+  css/layout.css
+  css/background.css
+  css/glassmorphism.css
+  css/carousel.css
+  css/animations.css
+  css/hero-slide.css
+  css/export.css
+  js/carousel.js
+  js/particles.js
+  js/aurora.js
+  js/mouseGlow.js
+  js/slideAnimations.js
+  js/exportPng.js
+  js/main.js
+  vendor/html2canvas.min.js
+)
+
+for file in "${files[@]}"; do
+    mkdir -p "$PROJECT/$(dirname "$file")"
+    touch "$PROJECT/$file"
+done

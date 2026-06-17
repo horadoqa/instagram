@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Qualidade de Software - Por Onde Começar?</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#0f172a,#1e293b);
+    color:#fff;
+    overflow:hidden;
+}
+
+.carousel{
+    position:relative;
+    width:100%;
+    height:100vh;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    padding:60px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    opacity:0;
+    transform:translateX(100%);
+    transition:all .6s ease;
+}
+
+.slide.active{
+    opacity:1;
+    transform:translateX(0);
+}
+
+.slide h1{
+    font-size:3rem;
+    margin-bottom:25px;
+    color:#38bdf8;
+}
+
+.slide h2{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#38bdf8;
+}
+
+.slide h3{
+    font-size:2rem;
+    margin-bottom:20px;
+    color:#31b683;
+}
+
+.slide p,
+.slide li{
+    font-size:1.2rem;
+    line-height:1.7;
+    max-width:900px;
+}
+
+.slide ul{
+    text-align:left;
+    margin-top:15px;
+}
+
+.slide li{
+    margin-bottom:12px;
+}
+
+.nav{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(255,255,255,0.15);
+    border:none;
+    color:white;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:24px;
+    transition:.3s;
+}
+
+.nav:hover{
+    background:#38bdf8;
+}
+
+.prev{
+    left:20px;
+}
+
+.next{
+    right:20px;
+}
+
+.dots{
+    position:absolute;
+    bottom:30px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#64748b;
+    cursor:pointer;
+}
+
+.dot.active{
+    background:#38bdf8;
+}
+
+.quote{
+    font-size:1.5rem;
+    font-style:italic;
+    color:#4bb696;
+    max-width:900px;
+}
+
+.highlight{
+    color:#38bdf8;
+    font-weight:bold;
+}
+
+@media(max-width:768px){
+    .slide{
+        padding:30px;
+    }
+
+    .slide h1{
+        font-size:2rem;
+    }
+
+    .slide h2{
+        font-size:1.5rem;
+    }
+
+    .slide p,
+    .slide li{
+        font-size:1rem;
+    }
+
+    .quote{
+        font-size:1.3rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="carousel">
+
+    <div class="slide active">
+        <h1>Qualidade de Software</h1>
+        <p>
+            <span class="highlight">Por onde começar?</span>
+        </p>
+        <br>
+        <p>
+            Ao entrar na área de QA, muitas pessoas querem começar escolhendo ferramentas ou criando processos.
+            Porém, sem entender o negócio, existe o risco de testar o que é pouco relevante e deixar passar problemas críticos.
+        </p>
+    </div>
+
+    <div class="slide">
+        <h2>1. Entender o Negócio</h2>
+        <ul>
+            <li>O que a empresa vende ou oferece?</li>
+            <li>Quem são os clientes?</li>
+            <li>Quais são os fluxos mais importantes?</li>
+            <li>Quais funcionalidades geram receita ou possuem maior impacto?</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>2. Conhecer o Produto</h2>
+        <ul>
+            <li>Como o sistema funciona?</li>
+            <li>Quais módulos existem?</li>
+            <li>Quais integrações externas são utilizadas?</li>
+            <li>Quais são os requisitos funcionais e não funcionais?</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>3. Mapear Riscos</h2>
+        <ul>
+            <li>O que pode causar prejuízo financeiro?</li>
+            <li>O que afeta a experiência do usuário?</li>
+            <li>Existem requisitos regulatórios?</li>
+            <li>Existem requisitos de segurança?</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>4. Analisar o Processo Atual</h2>
+        <ul>
+            <li>Como a equipe trabalha? (Scrum, Kanban, etc.)</li>
+            <li>Existe CI/CD?</li>
+            <li>Já existem testes automatizados?</li>
+            <li>Como são tratados bugs e incidentes?</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>5. Definir Estratégia de Qualidade</h2>
+        <ul>
+            <li>Testes funcionais</li>
+            <li>Testes de integração</li>
+            <li>Testes de regressão</li>
+            <li>Performance e segurança</li>
+            <li>Critérios de entrada e saída</li>
+            <li>Métricas de qualidade</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>6. Escolher e Implementar Ferramentas</h2>
+        <ul>
+            <li>Gestão de testes</li>
+            <li>Automação de testes</li>
+            <li>Integração com CI/CD</li>
+            <li>Monitoramento e relatórios</li>
+        </ul>
+    </div>
+
+    <div class="slide">
+        <h2>Visão Madura de QA</h2>
+            <p>Primeiro entender o negócio e os riscos.</p>
+            <p>Depois definir processos.</p>
+            <p>Somente então escolher ferramentas.</p>
+    
+        <br>
+        <p>
+            Ferramentas devem servir à estratégia de qualidade,
+            e não o contrário.
+        </p>
+    </div>
+
+    <div class="slide">
+        <h3 class="quote">
+            "Não se testa software; testa-se o valor que o software entrega ao negócio."
+        </h3>
+        <br>
+        <p>
+            Conhecer o negócio costuma ser o primeiro passo para um profissional de QA gerar impacto real dentro da empresa.
+        </p>
+    </div>
+
+    <button class="nav prev">&#10094;</button>
+    <button class="nav next">&#10095;</button>
+
+    <div class="dots"></div>
+
+</div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const dotsContainer = document.querySelector('.dots');
+let current = 0;
+
+slides.forEach((_, index) => {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if(index === 0) dot.classList.add('active');
+
+    dot.addEventListener('click', () => {
+        showSlide(index);
+    });
+
+    dotsContainer.appendChild(dot);
+});
+
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index){
+    slides[current].classList.remove('active');
+    dots[current].classList.remove('active');
+
+    current = index;
+
+    slides[current].classList.add('active');
+    dots[current].classList.add('active');
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+    showSlide((current + 1) % slides.length);
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+    showSlide((current - 1 + slides.length) % slides.length);
+});
+
+// Auto play
+setInterval(() => {
+    showSlide((current + 1) % slides.length);
+}, 10000);
+</script>
+
+</body>
+</html>
